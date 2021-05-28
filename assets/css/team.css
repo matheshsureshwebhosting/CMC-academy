@@ -1,0 +1,81 @@
+#team{
+    background: #ece9e6;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%)!important;
+}
+#team .cnt-block{ 
+    float:left; 
+    width:100%; 
+    background:#fff; 
+    padding:20px 10px 0 10px; 
+    text-align:center;
+ }
+ #team .team-card{
+    border:2px solid #d5d5d5;
+    margin-bottom: 2rem;
+    position: relative;
+ }
+ #team .cnt-block figure{
+    width:148px; 
+    height:148px; 
+    border-radius:100%; 
+    display:inline-block;
+ }
+#team .section-title span{
+    margin: 0;
+    margin: 0;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: "Poppins", sans-serif;
+    color: #002e5b;
+}
+#team .cnt-block img{ 
+    width:148px; 
+    height:148px; 
+    border-radius:100%; 
+ }
+#team .cnt-block h3{ 
+    color:#2a2a2a; 
+    font-size:16px; 
+    font-weight:500; 
+    padding:6px 0;
+    text-transform:uppercase;
+}
+#team p{
+    z-index: 1001;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+}
+#team .equal-hight{
+    height: 450px;
+}
+.container-team{
+    width: 100%;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 1200px){
+    .container-team {
+        max-width: 1400px;
+    }
+}
+
+@media (max-width: 760px){
+    .container-team {
+        max-width: 600px!important;
+    }
+    #team .equal-hight {
+        height: 350px;
+    }
+}
+@media (max-width: 569px){
+    .container-team {
+        max-width: 550px!important;
+    }
+    #team .equal-hight {
+        height: 300px;
+    }
+}

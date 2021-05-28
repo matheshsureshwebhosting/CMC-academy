@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>CMC - Course</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/img/logo/cmc_logo.png" rel="icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+    <!-- waves.css -->
+    <link rel="stylesheet" href="/vendor/waves/css/waves.min.css" type="text/css" media="all">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="/vendor/bootstrap/css/bootstrap.min.css">
+    <!-- themify icon -->
+    <link rel="stylesheet" type="text/css" href="/vendor/themify-icons/themify-icons.css">
+    <!-- font-awesome-n -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/vendor/font-awesome/all.min.css">    
+    <!-- scrollbar.css -->
+    <link rel="stylesheet" type="text/css" href="/vendor/jquery.mCustomScrollbar.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="/css/dashstyle.css">
+</head>
+<body>
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="loader-track">
+            <div class="preloader-wrapper">
+                <div class="spinner-layer spinner-blue">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+                <div class="spinner-layer spinner-red">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-yellow">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+
+                <div class="spinner-layer spinner-green">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <!--Header-->       
+        <div class="pcoded-container navbar-wrapper">
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+                    <div class="navbar-logo">
+                        <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
+                            <i class="ti-menu"></i>
+                        </a>
+                        <a href="/dashboard" class="header-logo">
+                            <img class="img-fluid logo" src="/img/logo/cmc_logo.png" alt="Theme-Logo" /> CMC Maritime Academy
+                        </a>
+                        <a class="mobile-options waves-effect waves-light">
+                            <i class="ti-more"></i>
+                        </a>
+                    </div>
+                    <div class="navbar-container container-fluid">
+                        <ul class="nav-left">
+                            <li>
+                                <div class="sidebar_toggle"><a href="javascript:void(0)"><i class="ti-menu"></i></a></div>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+                            <li>                                
+                                <a href="#" class="waves-effect waves-light">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li>                                
+                                <a href="#" class="waves-effect waves-light">
+                                    <span>Courses</span>
+                                </a>
+                            </li>
+                            <li>                                
+                                <a href="#" class="waves-effect waves-light">
+                                    <span>Packages</span>
+                                </a>
+                            </li>
+                            <li class="header-notification">                                
+                                <a href="#" class="waves-effect waves-light">
+                                    <span>My Cart <img class="img-fluid cart-img" src="/vendor/opencart-brands.svg" alt=""></span>
+                                    <span class="badge-cart">3</span>
+                                </a>
+                                <ul class="show-notification">
+                                    <li class="waves-effect waves-light">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">TASCO</h5>
+                                            </div>
+                                            <a class="discard btn btn-danger text-light">Discard</a>
+                                        </div>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">TASCO</h5>
+                                            </div>
+                                            <a class="discard btn btn-danger text-light">Discard</a>
+                                        </div>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <div class="media">
+                                            <div class="media-body">
+                                                <h5 class="notification-user">TASCO</h5>
+                                            </div>
+                                            <a class="discard btn btn-danger text-light">Discard</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                          
+                            <li class="user-profile header-notification">
+                                <a href="#!" class="waves-effect waves-light">
+                                    <img src="/img/dash/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
+                                    <span>John Doe</span>
+                                    <i class="ti-angle-down"></i>
+                                </a>
+                                <ul class="show-notification profile-notification">
+                                    <li class="waves-effect waves-light">
+                                        <a href="/dash-mycourses">
+                                            <i class="ti-notepad"></i> My Courses
+                                        </a>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <a href="/dash-feedback">
+                                            <i class="ti-comment-alt"></i> Feedback
+                                        </a>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <a href="/dash-certificate">
+                                            <i class="ti-file"></i> Certificate
+                                        </a>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <a href="/dash-profile">
+                                            <i class="ti-user"></i> View Profile
+                                        </a>
+                                    </li>
+                                    <li class="waves-effect waves-light">
+                                        <a href="/logout">
+                                            <i class="ti-layout-sidebar-left"></i> Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--HEader over-->
+
+            
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <!--Side nav bar-->
+                    <nav class="pcoded-navbar">
+                        <div class="sidebar_toggle"><a href="#"><i class="icon-close icons"></i></a></div>
+                        <div class="pcoded-inner-navbar main-menu">
+                            <div class="">
+                                <div class="main-menu-header">
+                                    <img class="img-80 img-radius" src="/img/dash/avatar-4.jpg" alt="User-Profile-Image">
+                                    <div class="user-details">
+                                        <span id="more-details">John Doe<i class="fa fa-caret-down"></i></span>
+                                    </div>
+                                </div>
+                                <div class="main-menu-content">
+                                    <ul>
+                                        <li class="more-details">
+                                            <a href="/dash-mycourses"><i class="ti-notepad"></i>My Courses</a>
+                                            <a href="/dash-feedback"><i class="ti-comment-alt"></i>Feedback</a>
+                                            <a href="/dash-certificate"><i class="ti-comment-alt"></i>Certificate</a>
+                                            <a href="/dash-profile"><i class="ti-user"></i>View Profile</a>
+                                            <a href="/logout"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="p-15 p-b-0">
+                                <form class="form-material">
+                                    <div class="form-group form-primary">
+                                        <input type="text" name="footer-email" class="form-control">
+                                        <span class="form-bar"></span>
+                                        <label class="float-label"><i class="fa fa-search m-r-10"></i>Search Course</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="pcoded-navigation-label">Courses</div>
+                            <ul class="pcoded-item pcoded-left-item">
+                                <li class="active">
+                                    <a href="/dashboard" class="waves-effect waves-dark">
+                                        <span class="pcoded-mtext">Advance Modular Courses</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/dashboard" class="waves-effect waves-dark">
+                                        <span class="pcoded-mtext">Basic Modular Courses</span>
+                                        <span class="pcoded-mcaret"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!--side nav bar over-->
+                    <div class="pcoded-content">
+                        <!-- Page-header start -->
+                        <div class="page-header">
+                            <div class="page-block">
+                                <div class="row align-items-center">
+                                    <div class="col-md-8">
+                                        <div class="page-header-title">
+                                            <h5 class="m-b-10">Advance Modular Course</h5>
+                                            <p class="m-b-0">Welcome to CMC Maritime Academy</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="breadcrumb">
+                                            <li class="breadcrumb-item">
+                                                <a href="/dashboard"> <i class="fa fa-home"></i> </a>
+                                            </li>
+                                            <li class="breadcrumb-item"><a href="#!">Cart</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Page-header end -->
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>TASCO</h5>
+                                                        <span>Training for Oil Tankers Cargo Operation</span>
+                                                        <div class="card-header-right" style="display: flex; align-items: center;">
+                                                            <span class="fee" style="font-weight: 600; font-size: larger;"> Rs. 12,390.00</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div class="row mb-4">
+                                                            <div class="col-lg">
+                                                                <h5>Duration : <span>12 Days</span></h5>
+                                                            </div>
+                                                            <div class="col-lg">
+                                                                <h5>Mode : <span>Online</span></h5>
+                                                            </div>
+                                                            <div class="col-lg mt-2 mt-lg-0">
+                                                                <select name="" id="">
+                                                                    <option value="">Select Start Date/Time</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                        <ul class="tab-group row">
+                                                            <li class="tab active col-lg col-3"><a href="#eligibility">Eligibility</a></li>
+                                                            <li class="tab col-lg col-6"><a href="#documents_required">Documents Required</a></li>
+                                                            <li class="tab col-lg col-3"><a href="#details">Details</a></li>
+                                                        </ul>
+                                                        <div class="tab-content">
+                                                            <div id="eligibility">
+                                                                <ul>
+                                                                    <li><i class="fas fa-angle-right mr-3"></i>All Marine Engineer Officer possessing Class I, II & IV CoC as per STCW 95 to STCW 2010 (Refer DGS STCW Circular No. 12 of 2012 dated 31.01.2012)</li>
+                                                                    <li><i class="fas fa-angle-right mr-3"></i>Holder of Passport, INDoS, CDC & CoC</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div id="documents_required">
+                                                                <ul>
+                                                                    <li><i class="fas fa-angle-right mr-3"></i>Photocopy of CDC (with sailing experience)</li>
+                                                                    <li><i class="fas fa-angle-right mr-3"></i>Photocopy of CoC</li>
+                                                                    <li><i class="fas fa-angle-right mr-3"></i>Photocopy of INDoS</li>
+                                                                    <li><i class="fas fa-angle-right mr-3"></i>Photocopy of Passport</li>
+                                                                    <li><i class="fas fa-angle-right mr-3"></i>2 Passport Size Color Photographs</li>
+                                                                </ul>
+                                                            </div>
+                                                            <div id="details">
+                                                                <ul>
+                                                                    <li class="mb-2">
+                                                                        <h6>Approved By </h6>
+                                                                        <p>D. G. Shipping, Govt. of India vide approval no. TR/A/193/2013 dated: 17.07.2013</p>
+                                                                    </li>
+                                                                    <li class="mb-2">
+                                                                        <h6>Description </h6>
+                                                                        <p>Upgradation and Revalidation course from STCW 1995 to STCW 2010 for Engineer Officers</p>
+                                                                    </li>
+                                                                    <li class="mb-2">
+                                                                        <h6>Attendance</h6>
+                                                                        <p>100% attendance is required for successful completion of the course</p>
+                                                                    </li>                                                                    
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row float-lg-right px-3 mt-3 ml-lg-1">
+                                                            <button class="btn btn-outline-primary">Buy Now</button>
+                                                        </div>
+                                                        <div class="row float-lg-right px-3 mt-3">
+                                                            <button class="btn btn-outline-primary">Add to Cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Required Jquery -->
+<script type="text/javascript" src="/vendor/jquery/jquery.min.js "></script>
+<script type="text/javascript" src="/vendor/jquery-ui.min.js "></script>
+<script type="text/javascript" src="/vendor/bootstrap/js/popper.js"></script>
+<script type="text/javascript" src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- waves js -->
+<script src="/vendor/waves/js/waves.min.js"></script>
+ <!-- jquery slimscroll js -->
+ <script type="text/javascript" src="/vendor/jquery.slimscroll.js"></script>
+ <script type="text/javascript" src="/vendor/jquery.quicksearch.js"></script>
+
+
+  <!-- menu js -->
+  <script src="/js/pcoded.min.js"></script>
+  <script src="/vendor/vertical-layout.min.js "></script>
+
+  <script type="text/javascript" src="/js/script.js "></script>
+  <script src="/js/dash.js"></script>
+</body>
+</html>

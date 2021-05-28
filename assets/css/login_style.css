@@ -1,0 +1,150 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+html{
+    overflow-y: scroll; 
+}
+body{
+    /*background: -webkit-linear-gradient(left, #0072ff, #00c6ff);*/
+    background: url("../img/back6.jpg") fixed no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Raleway';
+}
+.btn-signup{
+    background-color: #045de9;
+    background-image: linear-gradient(315deg,#09c6f9  17%, #045de9 84%);
+    color: #fff;
+}
+a {
+    text-decoration:none;
+    color:#045de9;
+    transition:.5s ease;
+}
+a:hover{
+    color: #09c6f9;/*#ec868c*/
+}
+.form{
+    background: rgb(236, 236, 236);
+    padding: 30px;
+    max-width:600px;
+    margin:10% auto 0px auto;
+    border-radius:4px;
+    box-shadow:0 4px 10px 4px rgba(19,35,47,.3);
+}
+.tab-group{
+    list-style:none;
+    padding:0;
+    margin:0 0 40px 0;
+}
+h1{
+    text-align:center;
+    color:#333;
+    font-weight:600;
+    display: block;
+}
+label{
+    position:absolute;
+    transform:translateY(6px);
+    left:13px;
+    color:rgba(0,0,0,.5);
+    transition:all 0.25s ease;
+    pointer-events: none;
+    font-size:22px;
+}
+label .req{
+    margin:2px;
+    color:#045de9;
+}
+label.active{
+    transform:translateY(50px);
+    left:2px;
+    font-size:14px;
+}
+label.active.req{
+    opacity:0;
+}
+label.highlight{
+	color:#333;
+}
+input, textarea{
+    font-size:22px;
+    display:block;
+    width:100%;
+    height:100%;
+    padding:5px 10px;
+    background:none;
+    background-image:none;
+    border:1px solid #a0b3b0;
+    color:#333;
+    border-radius:0;
+    transition:border-color .25s ease, box-shadow .25s ease;
+}
+input:focus, textarea:focus{
+    outline:0;
+    border-color:#045de9;
+}
+textarea{
+    border:2px solid #a0b3b0;
+    resize: vertical;
+}
+.field-wrap{
+    position:relative;
+    margin-bottom:40px;
+}
+.top-row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.top-row > div{
+    float:left;
+    width:48%;
+    margin-right:4%;
+}
+.top-row > div:last-child{ 
+  margin:0;
+}
+.button{
+    border:0;
+    outline:none;
+    border-radius:0;
+    padding:15px 0;
+    font-size:1.5rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:.1em;
+    background-color: #155391;
+    background-image: linear-gradient(315deg,#09c6f9  17%, #155391 84%);
+    color:#ffffff;
+    transition:all.5s ease;
+    -webkit-appearance: none;
+}
+.button:hover, .button:focus{
+    background:#155391;
+}
+.button-block{
+    display:block;
+    width:100%;
+}
+.forgot{
+    margin-top:-20px;
+    text-align:right;
+}
+.login-head{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.signup{
+    color: #fff;
+    text-align: center;
+    display: block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+.signup:hover{
+    color: #09c6f9;
+}
