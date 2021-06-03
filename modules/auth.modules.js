@@ -5,8 +5,8 @@ module.exports.accountCheck = async (indosnumber) => {
     const accountCheck = new Promise(async (resolve, reject) => {
         await db.collection("users").get().then((snap) => {
             snap.forEach((doc) => {
-                if (doc.data == undefined) return resolve(false)                
-                if (doc.data().indosnumber==indosnumber) return resolve(doc.data())
+                if (doc.data == undefined) return resolve(false)
+                if (doc.data().indosnumber != undefined && doc.data().indosnumber == indosnumber) return resolve(doc.data())
                 return resolve(false)
             })
         }).catch((error) => { if (error) return resolve(false) })

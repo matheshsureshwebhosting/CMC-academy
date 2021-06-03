@@ -52,4 +52,4 @@ $(document).ready(function() {
 });
 
 
-$("body").append('<div class="fixed-button active"><a href="#" target="_blank" class="btn btn-md btn-primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i> View My Cart</a> </div>');var $window=$(window),nav=$(".fixed-button");
+$("body").append('<div class="fixed-button active"><a href="/viewcart" target="_blank" class="btn btn-md btn-primary"><i class="fa fa-shopping-cart" aria-hidden="true"></i> View My Cart</a> </div>');var $window=$(window),nav=$(".fixed-button");

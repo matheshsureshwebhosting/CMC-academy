@@ -1,19 +1,18 @@
-
 const signupreg = document.getElementById("signupreg")
 
-signupreg.addEventListener("click", () => {
-    var firstname = document.getElementById("firstname").value
-    var lastname = document.getElementById("lastname").value
-    var email = document.getElementById("email").value
-    var indosnumber = document.getElementById("indosnumber").value
-    var phonenumber = document.getElementById("phonenumber").value
-    var dob = document.getElementById("dob").value
-    var password = document.getElementById("password").value
-    var cpassword = document.getElementById("cpassword").value
-    if (firstname.trim().length == 0) {        
-        document.getElementById("errordiv").innerHTML=""
-        document.getElementById("errordiv").innerHTML +=
-            `
+signupreg.addEventListener("click", async () => {
+  var firstname = document.getElementById("firstname").value
+  var lastname = document.getElementById("lastname").value
+  var email = document.getElementById("email").value
+  var indosnumber = document.getElementById("indosnumber").value
+  var phonenumber = document.getElementById("phonenumber").value
+  var dob = document.getElementById("dob").value
+  var password = document.getElementById("password").value
+  var cpassword = document.getElementById("cpassword").value
+  if (firstname.trim().length == 0) {
+    document.getElementById("errordiv").innerHTML = ""
+    document.getElementById("errordiv").innerHTML +=
+      `
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
                                 First Name Required
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -21,10 +20,10 @@ signupreg.addEventListener("click", () => {
                                 </button>
                               </div>
         `
-    } else if (lastname.trim().length == 0) {   
-        document.getElementById("errordiv").innerHTML=""     
-        document.getElementById("errordiv").innerHTML +=
-            `
+  } else if (lastname.trim().length == 0) {
+    document.getElementById("errordiv").innerHTML = ""
+    document.getElementById("errordiv").innerHTML +=
+      `
         <div class="alert alert-danger alert-dismissible fade show" role="alert">
         Last Name Required
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -33,10 +32,10 @@ signupreg.addEventListener("click", () => {
                               </div>
         `
 
-    } else if (!(/^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/).test(email)) {  
-        document.getElementById("errordiv").innerHTML=""
-        document.getElementById("errordiv").innerHTML +=
-    `
+  } else if (!(/^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/).test(email)) {
+    document.getElementById("errordiv").innerHTML = ""
+    document.getElementById("errordiv").innerHTML +=
+      `
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
 Email Required
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -45,10 +44,10 @@ Email Required
                       </div>
 `
 
-    } else if (indosnumber.trim().length != 8) {
-        document.getElementById("errordiv").innerHTML=""
-        document.getElementById("errordiv").innerHTML +=
-        `
+  } else if (indosnumber.trim().length != 8) {
+    document.getElementById("errordiv").innerHTML = ""
+    document.getElementById("errordiv").innerHTML +=
+      `
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
     Indos Number Required
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -57,10 +56,10 @@ Email Required
                           </div>
     `
 
-    } else if (phonenumber.trim().length == 0) {
-        document.getElementById("errordiv").innerHTML=""
-        document.getElementById("errordiv").innerHTML +=
-        `
+  } else if (phonenumber.trim().length == 0) {
+    document.getElementById("errordiv").innerHTML = ""
+    document.getElementById("errordiv").innerHTML +=
+      `
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
     Phone Number Required
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -69,10 +68,10 @@ Email Required
                           </div>
     `
 
-    } else if (dob.trim().length == 0) {
-        document.getElementById("errordiv").innerHTML=""
-        document.getElementById("errordiv").innerHTML +=
-        `
+  } else if (dob.trim().length == 0) {
+    document.getElementById("errordiv").innerHTML = ""
+    document.getElementById("errordiv").innerHTML +=
+      `
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
     Date Of Birth Required
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -81,10 +80,10 @@ Email Required
                           </div>
     `
 
-    } else if (password.trim().length == 0) {
-        document.getElementById("errordiv").innerHTML=""
-        document.getElementById("errordiv").innerHTML +=
-        `
+  } else if (password.trim().length == 0) {
+    document.getElementById("errordiv").innerHTML = ""
+    document.getElementById("errordiv").innerHTML +=
+      `
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
     Password Required
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -93,10 +92,10 @@ Email Required
                           </div>
     `
 
-    } else if (cpassword != password) {
-        document.getElementById("errordiv").innerHTML=""
-        document.getElementById("errordiv").innerHTML +=
-        `
+  } else if (cpassword != password) {
+    document.getElementById("errordiv").innerHTML = ""
+    document.getElementById("errordiv").innerHTML +=
+      `
     <div class="alert alert-danger alert-dismissible fade show" role="alert">
    Confirm Password Not Match
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -105,43 +104,50 @@ Email Required
                           </div>
     `
 
-    } else {
-        console.log(firstname, lastname, email, indosnumber, phonenumber, dob, password, cpassword)
-
-        axios.post("/signup", {
-            firstname: firstname,
-            lastname: lastname,
-            email: email,
-            indosnumber: indosnumber,
-            phonenumber: phonenumber,
-            dob: dob,
-            password: password,            
-        }).then((res) => {
-          document.getElementById("errordiv").innerHTML=""
-          document.getElementById("errordiv").innerHTML +=
-          `
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-     Account Registerd
-                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                              </button>
-                            </div>
-      `
-        }).catch((error) => {
-          if(error){
-            document.getElementById("errordiv").innerHTML=""
-            document.getElementById("errordiv").innerHTML +=
-            `
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-       ${error.response.data}
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>
-        `
-          }
-        })
+  } else {
+    console.log(firstname, lastname, email, indosnumber, phonenumber, dob, password, cpassword)
+    const hashpwd = await axios.post("/hash/generate", {
+      password: password
+    }).then((res) => {
+      return res.data
+    }).catch((error) => {
+      return false
+    })
+    if (hashpwd == false) return alert("something Wrong")
+    const siginup = await firebase.auth().createUserWithEmailAndPassword(email, hashpwd).then(function (user) {
+      var userid = user.user.uid
+      return { status: true, userid: userid }
+    }).catch(function (error) {
+      var errorMessage = error.message;
+      return { status: false, msg: errorMessage }
+    });
+    if (siginup.status == false) return alert(siginup.msg)
+    const sendsiginform = await axios.post("/signup", {
+      firstname: firstname,
+      lastname: lastname,
+      email: email,
+      indosnumber: indosnumber,
+      phonenumber: phonenumber,
+      dob: dob,
+      password: hashpwd,
+      clientid: siginup.userid
+    }).then((res) => {      
+      if (res.data == true) {
+        return { status: true, msg: "Registered" }
+      } else {
+        return { status: false, msg: "Try Again" }
+      }
+    }).catch((error) => {
+      if (error) return { status: false, msg: error }
+    })
+    if(sendsiginform.status==true){
+      alert("Registerd")
+      window.location.replace("/home")
+    }else{
+      alert("try again")
     }
+   
+  }
 
 })
 

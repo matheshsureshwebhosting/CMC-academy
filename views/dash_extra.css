@@ -1,0 +1,241 @@
+.form-align label{
+    margin:0;
+}
+.profile-change{
+    color: #448aff;
+}
+.profile-change:hover{
+    color: #284269;
+}
+.btn-title {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 4px;
+    /*background: #284269;*/
+    background: #448aff;
+    padding: 10px 15px;
+    transition: all .5s ease;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+.btn-title a {
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  .is-active {
+    box-shadow: 0 20px 5px -10px rgba(#000, 0.4);
+    transform: translateY(10px);
+  }
+
+@media (min-width: 768px){
+    .form-align{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+
+/*============================
+
+    Mycourses
+
+==============================*/
+.mycourse-thead-inverse{
+    background: #284269;
+    color: #ffffff;
+}
+.ongoing{
+    color: #448aff;
+}
+.completed{
+    color: #53a653;
+}
+.dropped{
+    color: #be0000;
+}
+
+/*============================
+
+    Mycertificates
+
+==============================*/
+.btn-flip {
+    opacity: 1;
+    outline: 0;
+    color: #fff;
+    line-height: 30px;
+    position: relative;
+    text-align: center;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-size: 10px;
+    text-transform: uppercase;
+}
+.btn-flip:hover:after {
+    opacity: 1;
+    transform: translateY(0) rotateX(0);
+}
+.btn-flip:hover:before {
+    opacity: 0;
+    transform: translateY(50%) rotateX(90deg);
+}
+.btn-flip:after {
+    top: 0;
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    color: #fefefe;
+    display: block;
+    transition: 0.5s;
+    position: absolute;
+    content: attr(data-back);
+    transform: translateY(-50%) rotateX(90deg);
+    background : #365d9d;
+}
+.btn-flip:before {
+    top: 0;
+    left: 0;
+    opacity: 1;
+    color: #284269;
+    display: block;
+    line-height: 30px;
+    transition: 0.5s;
+    position: relative;
+    padding: 0 10px;
+    background: #fefefe;
+    content: attr(data-front);
+    border: 1px solid #284269;
+    transform: translateY(0) rotateX(0);
+}
+table{
+    font-size: 11px;
+}
+@media (min-width: 768px){
+    .btn-flip:before {
+        padding: 0 25px;
+    }
+    .btn-flip{        
+        font-size: 14px;
+    }
+    table{
+        font-size: 14px;
+    }
+}
+@media(max-width: 768px){
+    
+    .main-body .page-wrapper{
+        padding:0;
+    }
+}
+
+/*=====================================
+    View My Cart
+=====================================*/
+.payment-info {
+    background: #365d9d;
+    padding: 10px;
+    border-radius: 6px;
+    color: #fff;
+    font-weight: bold
+}
+
+.product-details {
+    padding: 10px
+}
+
+.cart {
+    background: #fff
+}
+
+.p-about {
+    font-size: 12px
+}
+
+.table-shadow {
+    -webkit-box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42);
+    box-shadow: 5px 5px 15px -2px rgba(0, 0, 0, 0.42)
+}
+
+.type {
+    font-weight: 400;
+    font-size: 10px
+}
+
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio span {
+    padding: 1px 12px;
+    border: 2px solid #ada9a9;
+    display: inline-block;
+    color: #8f37aa;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 300
+}
+
+label.radio input:checked+span {
+    border-color: #fff;
+    background-color: blue;
+    color: #fff
+}
+
+.credit-inputs {
+    background: rgb(102, 102, 221);
+    color: #fff !important;
+    border-color: rgb(102, 102, 221)
+}
+
+.credit-inputs::placeholder {
+    color: #fff;
+    font-size: 13px
+}
+
+.credit-card-label {
+    font-size: 9px;
+    font-weight: 300
+}
+
+.form-control.credit-inputs:focus {
+    background: rgb(102, 102, 221);
+    border: rgb(102, 102, 221)
+}
+
+.line {
+    border-bottom: 1px solid rgb(102, 102, 221)
+}
+
+.information span {
+    font-size: 12px;
+    font-weight: 500
+}
+
+.information {
+    margin-bottom: 5px
+}
+
+.items {
+    -webkit-box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.25);
+    box-shadow: 5px 5px 4px -1px rgba(0, 0, 0, 0.08)
+}
+
+.spec {
+    font-size: 11px
+}
