@@ -4,7 +4,7 @@ var userid = localStorage.getItem("userid")
 db.collection("cart").where("userid", "==", userid).get().then((snap) => {
     snap.forEach((doc) => {
         document.getElementById("cart").innerHTML += `
-        <li li class="waves-effect waves-light" >
+        <li li class="waves-effect waves-light">
             <div class="media">
                 <div class="media-body">
                     <h5 class="notification-user">${doc.data().category}</h5>
@@ -15,4 +15,5 @@ db.collection("cart").where("userid", "==", userid).get().then((snap) => {
         </li >
         `
     })
+  
 })

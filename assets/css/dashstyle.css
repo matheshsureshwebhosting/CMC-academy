@@ -2659,6 +2659,7 @@ select.form-control:not([size]):not([multiple]) {
 .main-menu .main-menu-header img {
 	position: relative;
 	width: 60px;
+	height: 60px;
 }
 
 .img-radius {
@@ -2856,6 +2857,7 @@ select.form-control:not([size]):not([multiple]) {
 .header-navbar .navbar-wrapper .navbar-container .nav-right .user-profile img {
 	margin-right: 10px;
 	width: 40px;
+	height: 40px;
 }
 
 .header-navbar .navbar-wrapper .navbar-container .nav-right .user-profile i {

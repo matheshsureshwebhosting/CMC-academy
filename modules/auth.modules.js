@@ -3,12 +3,13 @@ const db = friebase.firestore()
 
 module.exports.accountCheck = async (indosnumber) => {
     const accountCheck = new Promise(async (resolve, reject) => {
-        await db.collection("users").get().then((snap) => {
+        await db.collection("users").where("indosnumber", "==", indosnumber).get().then((snap) => {
+            const data = []
             snap.forEach((doc) => {
-                if (doc.data == undefined) return resolve(false)
-                if (doc.data().indosnumber != undefined && doc.data().indosnumber == indosnumber) return resolve(doc.data())
-                return resolve(false)
+                data.push(doc.data())
             })
+            if (data.length == 0) return resolve(false)
+            return resolve(data)
         }).catch((error) => { if (error) return resolve(false) })
     })
     return await accountCheck
@@ -19,8 +20,8 @@ module.exports.createAccount = async (userinfo) => {
     const createAccount = new Promise(async (resolve, reject) => {
         const { clientid } = userinfo
         db.collection("users").doc(clientid).set(userinfo).then(() => {
-            return resolve(true)
-        }).catch((error) => { if (error) return resolve(false) })
+            return resolve({ status: true, clientid: clientid })
+        }).catch((error) => { if (error) return resolve({ status: false }) })
     })
     return await createAccount
 }

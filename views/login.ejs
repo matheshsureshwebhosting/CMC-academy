@@ -20,7 +20,10 @@
   <!-- Template Main CSS File -->
   <link href="/css/login_style.css" rel="stylesheet">
 
-
+  <link rel="stylesheet" href="/js/log/vendor/toaster/toaster/build/toastr.css">
+  <script src="/js/log/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <script src="/js/log/vendor/toaster/toaster/build/toastr.min.js"></script>
+  <script src="/js/log/toaster.js"></script>
 
 </head>
 <body>
@@ -46,10 +49,10 @@
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password" required autocomplete="off" id="password" />
+            <input type="text" required autocomplete="off" id="password" />
           </div>
         
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
+          <p class="forgot"><a href="/forgot">Forgot Password?</a></p>
           
           <button class="button button-block" id="loginbtn">Log In</button>
           
@@ -67,7 +70,7 @@
    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
    <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase.js"></script>
    <script src="/js/custom/firebase.js"></script>
-   <script src="/js/custom/login.js"></script>
+   <script src="/js/custom/login1.js"></script>
 
 </body>
 </html>

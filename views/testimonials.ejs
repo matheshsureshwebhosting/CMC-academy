@@ -13,7 +13,9 @@
   <link href="/img/logo/cmc_logo.png" rel="icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -39,91 +41,11 @@
 <body>
 
   <!--HEADER ABOVE BAR SECTION-->
-    
+
 
   <!--HEADER MAIN-->
-  <header id="header" class="fixed-top ">
-    <div id="sm-header">
-      <nav class="thin-head navbar navbar-expand-lg d-none d-lg-flex">
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                  <a class="nav-link py-1" href="/ebrochure.pdf" target="_blank">Download e-Brochure</a>
-              </li>
-          </ul>
-          <ul class="navbar-nav ml-auto socialmedia">
-              <li class="nav-item">
-                  <a class="py-1" href="#"><i class="fa fa-twitter"></i></a>
-              </li>
-              <li class="nav-item">
-                  <a class="py-1" href="https://www.facebook.com/cmcchennaiofficial"><i class="fa fa-facebook"></i></a>
-              </li>
-              <li class="nav-item">
-                  <a class="py-1" href="https://www.instagram.com/cmc_maritime_academy_chennai/"><i class="fa fa-instagram"></i></a>
-              </li>
-              <li class="nav-item">
-                  <a class="py-1" href="https://www.youtube.com/channel/UCpLhH2j93cbeEz1vLS5c4pQ/featured"><i class="fa fa-youtube"></i></a>
-              </li>            
-          </ul>
-        </nav>
-      </div>
-      <div class="container-fluid d-flex align-items-center my-2">
-  
-          <h1 class="logo">
-              <a href="/home">
-                  <div class="d-flex align-items-center">
-                      <img src="/img/logo/logo-img.png" alt="" class="img-fluid mr-2">
-                      <div class="d-flex flex-column">
-                          <span class="d-inline-block d-lg-none">CMC</span>
-                          <span class="d-none d-lg-inline-block">CMC Maritime Academy</span>
-                          <span class="location">Chennai</span>
-                      </div>
-                  </div>
-              </a>
-          </h1>
-          <nav class="nav-menu d-none d-lg-block ml-auto">
-      
-              <ul>
-              <li><a href="/home">Home</a></li>
-      
-              <li class="drop-down"><a href="#">About</a>
-                  <ul>
-                  <li><a href="/about">About Us</a></li>
-                  <li><a href="/team">Faculty</a></li>
-                  <li><a href="/testimonials">Testimonials</a></li>
-      
-                  <li class="drop-down"><a href="#">Deep Drop Down</a>
-                      <ul>
-                      <li><a href="#">Deep Drop Down 1</a></li>
-                      <li><a href="#">Deep Drop Down 2</a></li>
-                      </ul>
-                  </li>
-                  </ul>
-              </li>
-      
-              <li class="drop-down"><a href="#">Courses</a>
-                  <ul>
-                  <li><a href="/dashboard" target="_blank">Basic Modular Courses</a></li>
-                  <li><a href="/dashboard" target="_blank">Advanced Modular Courses</a></li>
-                  <li><a href="/dashboard" target="_blank">Preparatory Courses</a></li>
-                  <li><a href="/dashboard" target="_blank">Refresher Courses</a></li>
-                  <li><a href="/dashboard" target="_blank">Simulator Courses</a></li>
-                  <li><a href="/dashboard" target="_blank">Package</a></li>
-                  </ul>
-              </li>
-      
-              <li><a href="/academic">Academic</a></li>
-              <li><a href="/" target="_blank">Login</a></li>
-              <li><a href="/contact">Contact</a></li>
-              <li class="active"><a href="/testimonials">Testimonials</a></li>
-      
-              </ul>
-      
-          </nav><!-- .nav-menu -->
-  
-          <a href="/dashboard" class="get-started-btn ml-auto ml-lg-4">Book Now</a>
-  
-      </div>
-  </header><!-- End Header -->
+  <%- include('partial/header'); %>
+  <!-- End Header -->
 
   <main id="main">
 
@@ -134,7 +56,7 @@
         <div class="d-flex justify-content-between align-items-center">
           <h2>Testimonials</h2>
           <ol>
-            <li><a href="/home">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li>Testimonials</li>
           </ol>
         </div>
@@ -146,9 +68,9 @@
     <section id="testimonials" class="testimonials">
       <div class="container">
 
-        <div class="row">
+        <div class="row" id="feedbackview">
 
-          <div class="col-lg-6">
+          <!-- <div class="col-lg-6">
             <div class="testimonial-item">
               <img src="/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
               <h3>Saul Goodman</h3>
@@ -159,72 +81,9 @@
                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
               </p>
             </div>
-          </div>
+          </div> -->
 
-          <div class="col-lg-6">
-            <div class="testimonial-item mt-4 mt-lg-0">
-              <img src="/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-              <h3>Sara Wilsson</h3>
-              <h4>Designer</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
 
-          <div class="col-lg-6">
-            <div class="testimonial-item mt-4">
-              <img src="/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-              <h3>Jena Karlis</h3>
-              <h4>Store Owner</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="testimonial-item mt-4">
-              <img src="/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-              <h3>Matt Brandon</h3>
-              <h4>Freelancer</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="testimonial-item mt-4">
-              <img src="/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-              <h3>John Larson</h3>
-              <h4>Entrepreneur</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="testimonial-item mt-4">
-              <img src="/img/testimonials/testimonials-6.jpg" class="testimonial-img" alt="">
-              <h3>Emily Harison</h3>
-              <h4>Store Owner</h4>
-              <p>
-                <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                Eius ipsam praesentium dolor quaerat inventore rerum odio. Quos laudantium adipisci eius. Accusamus qui iste cupiditate sed temporibus est aspernatur. Sequi officiis ea et quia quidem.
-                <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-              </p>
-            </div>
-          </div>
 
         </div>
 
@@ -243,69 +102,76 @@
   <!-- ======== Footer =========== -->
   <section id="footer">
     <div class="footer-top">
-        <div class="container">
-          <div class="row">
-  
-            <div class="col-lg-3 col-md-6">
-              <div class="footer-info">
-                <h3>CMC Maritime Academy</h3>
-                <p>
-                  The Taj, New No. 70, Old No. 29,<br>
-                  Block 'C', 3rd Floor,<br>
-                  Ritherdon Road, Vepery,<br>
-                  Chennai - 600 007. Tamil Nadu.<br><br>
-                </p>
-                  <a href="tel:+919843655985" class="ph"><strong><img src="/img/icon/phone-alt-solid.svg" height="14px" alt=""> </strong> <span>+91 98436 55985</span></a>
-                  <p class="ph my-2"><strong><img src="/img/icon/whatsapp-brands.svg" height="16px" alt=""> </strong> <span>+91 9843655985</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>+91 9445031188</span></p>
-                  <a class="ph" href="mailto:admission@cmcacademy.ac.in"><strong><img src="/img/icon/envelope-solid.svg" height="14px" alt=""> </strong> admission@cmcacademy.ac.in</a>
-                       
-                <div class="social-links mt-3">
-                  <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                  <a href="#" class="google-plus"><i class="fa fa-google"></i></a>
-                  <a href="https://www.facebook.com/cmcchennaiofficial" class="facebook"><i class="fa fa-facebook"></i></a>
-                  <a href="https://www.instagram.com/cmc_maritime_academy_chennai/" class="instagram"><i class="fa fa-instagram"></i></a>
-                  <a href="https://www.youtube.com/channel/UCpLhH2j93cbeEz1vLS5c4pQ/featured" class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
-                </div>
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>CMC Maritime Academy</h3>
+              <p>
+                The Taj, New No. 70, Old No. 29,<br>
+                Block 'C', 3rd Floor,<br>
+                Ritherdon Road, Vepery,<br>
+                Chennai - 600 007. Tamil Nadu.<br><br>
+              </p>
+              <a href="tel:+919843655985" class="ph"><strong><img src="/img/icon/phone-alt-solid.svg" height="14px"
+                    alt=""> </strong> <span>+91 98436 55985</span></a>
+              <p class="ph my-2"><strong><img src="/img/icon/whatsapp-brands.svg" height="16px" alt=""> </strong>
+                <span>+91 9843655985</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>+91 9445031188</span>
+              </p>
+              <a class="ph" href="mailto:admission@cmcacademy.ac.in"><strong><img src="/img/icon/envelope-solid.svg"
+                    height="14px" alt=""> </strong> admission@cmcacademy.ac.in</a>
+
+              <div class="social-links mt-3">
+                <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <a href="#" class="google-plus"><i class="fa fa-google"></i></a>
+                <a href="https://www.facebook.com/cmcchennaiofficial" class="facebook"><i
+                    class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/cmc_maritime_academy_chennai/" class="instagram"><i
+                    class="fa fa-instagram"></i></a>
+                <a href="https://www.youtube.com/channel/UCpLhH2j93cbeEz1vLS5c4pQ/featured" class="youtube"><i
+                    class="fa fa-youtube" aria-hidden="true"></i></a>
               </div>
             </div>
-  
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/home">Home</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/about">About us</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/">Login</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/testimonials">Testimonials</a></li>
-              </ul>
-            </div>
-  
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Academic</h4>
-              <ul>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/academic">Infrastructure</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/team">Faculties</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/academic">Rules and Regulations</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/academic">FAQ</a></li>
-              </ul>
-            </div>
-  
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Courses</h4>
-              <ul>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Basic Modular Courses</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Advanded Modular Courses</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Refresher Courses</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Simulator Courses</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Preparatory Courses</a></li>
-                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Packages</a></li>
-              </ul>
-            </div>
-            
-  
           </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/">Home</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/about">About us</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/">Login</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/testimonials">Testimonials</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Academic</h4>
+            <ul>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/academic">Infrastructure</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/team">Faculties</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/academic">Rules and Regulations</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/academic">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Courses</h4>
+            <ul>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Basic Modular Courses</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Advanded Modular Courses</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Refresher Courses</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Simulator Courses</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Preparatory Courses</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Packages</a></li>
+            </ul>
+          </div>
+
+
         </div>
       </div>
-    
+    </div>
+
   </section>
 
   <a href="#" class="back-to-top">
@@ -313,11 +179,11 @@
     <img src="/img/steer.png" alt="">
   </a>
 
-    <!-- Vendor JS Files -->
+  <!-- Vendor JS Files -->
   <script src="/vendor/jquery/jquery.min.js"></script>
   <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>  
+  <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="/vendor/bootstrap/js/popper.js"></script>
   <script src="/vendor/owl.carousel/owl.carousel.min.js"></script>
 
@@ -330,7 +196,11 @@
   <script src="/js/faculty.js"></script>
   <!--For Academic page-->
   <script src="/js/academic_gal.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase.js"></script>
+  <script src="/js/custom/firebase.js"></script>
+  <script src="/js/custom/feedbackview.js"></script>
 
 </body>
+
 
 </html>

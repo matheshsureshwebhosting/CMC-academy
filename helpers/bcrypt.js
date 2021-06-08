@@ -12,9 +12,9 @@ module.exports.createrHashpwd = async (password) => {
 
 module.exports.verifyPwd = async (password, hashPwd) => {
     try {
-        const verifyPwd = await bcrypt.compare(password, hashPwd)
+        const verifyPwd = await bcrypt.compare(password, hashPwd)        
         return verifyPwd
-    } catch (error) {
+    } catch (error) {        
         if (error) return false
     }
 }

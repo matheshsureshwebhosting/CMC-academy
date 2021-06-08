@@ -29,6 +29,11 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="/css/dashstyle.css">
     <link rel="stylesheet" type="text/css" href="/css/dash_extra.css">
+
+    <link rel="stylesheet" href="/js/log/vendor/toaster/toaster/build/toastr.css">
+    <script src="/js/log/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/js/log/vendor/toaster/toaster/build/toastr.min.js"></script>
+    <script src="/js/log/toaster.js"></script>
 </head>
 
 <body>
@@ -96,7 +101,7 @@
                         <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
                             <i class="ti-menu"></i>
                         </a>
-                        <a href="dash.html" class="header-logo">
+                        <a href="/" class="header-logo">
                             <img class="img-fluid logo" src="/img/logo/cmc_logo.png" alt="Theme-Logo" /> CMC Maritime
                             Academy
                         </a>
@@ -113,22 +118,22 @@
                         </ul>
                         <ul class="nav-right">
                             <li class="d-none d-md-inline-block">
-                                <a href="/home" class="waves-effect waves-light">
+                                <a href="/" class="waves-effect waves-light">
                                     <span>Home</span>
                                 </a>
                             </li>
                             <li class="d-none d-md-inline-block">
-                                <a href="#" class="waves-effect waves-light">
+                                <a href="/dashboard" class="waves-effect waves-light">
                                     <span>Courses</span>
                                 </a>
                             </li>
                             <li class="d-none d-md-inline-block">
-                                <a href="#" class="waves-effect waves-light">
+                                <a href="/dashboard" class="waves-effect waves-light">
                                     <span>Packages</span>
                                 </a>
                             </li>
 
-                            <li class="header-notification">
+                            <!-- <li class="header-notification">
                                 <a href="#" class="waves-effect waves-light">
                                     <span>My Cart <img class="img-fluid cart-img" src="/vendor/opencart-brands.svg"
                                             alt=""></span>
@@ -138,33 +143,34 @@
 
 
                                 </ul>
-                            </li>
+                            </li> -->
 
 
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
-                                    <img src="/img/dash/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                    <span>John Doe</span>
+                                    <img src="/img/profilepic.png" class="img-radius" id="hdppic"
+                                        alt="User-Profile-Image">
+                                    <span id="hdpname"></span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
                                     <li class="waves-effect waves-light">
-                                        <a href="dashboard/mycourses">
+                                        <a href="/dashboard/mycourses">
                                             <i class="ti-notepad"></i> My Courses
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="dashboard/feedback">
+                                        <a href="/dashboard/feedback">
                                             <i class="ti-comment-alt"></i> Feedback
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="dashboard/certificate">
+                                        <a href="/dashboard/certificate">
                                             <i class="ti-file"></i> Certificate
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="dashboard/profile">
+                                        <a href="/dashboard/profile">
                                             <i class="ti-user"></i> View Profile
                                         </a>
                                     </li>
@@ -190,21 +196,20 @@
                         <div class="pcoded-inner-navbar main-menu">
                             <div class="">
                                 <div class="main-menu-header">
-                                    <img class="img-80 img-radius" src="/img/dash/avatar-4.jpg"
-                                        alt="User-Profile-Image">
-                                    <div class="user-details">
-                                        <span id="more-details">John Doe<i class="fa fa-caret-down"></i></span>
+                                    <img class="img-80 img-radius" src="/img/profilepic.png" alt="User-Profile-Image"
+                                        id="dashdppic">
+                                    <div class="user-details" id="more-details" style="cursor: pointer;">
+                                        <span id="dashdpname"> <i class="fa fa-caret-down"></i></span>
                                     </div>
-                                    <span style="margin-right: 20px;color:rgb(220, 236, 250)">88EL8888</span>
                                 </div>
                                 <div class="main-menu-content">
                                     <ul>
                                         <li class="more-details">
-                                            <a href="dashboard/mycourses"><i class="ti-notepad"></i>My Courses</a>
-                                            <a href="dashboard/feedback"><i class="ti-comment-alt"></i>Feedback</a>
-                                            <a href="dashboard/certificate"><i
+                                            <a href="/dashboard/mycourses"><i class="ti-notepad"></i>My Courses</a>
+                                            <a href="/dashboard/feedback"><i class="ti-comment-alt"></i>Feedback</a>
+                                            <a href="/dashboard/certificate"><i
                                                     class="ti-comment-alt"></i>Certificate</a>
-                                            <a href="dashboard/profile"><i class="ti-user"></i>View Profile</a>
+                                            <a href="/dashboard/profile"><i class="ti-user"></i>View Profile</a>
                                             <a href="/logout"><i class="ti-layout-sidebar-left"></i>Logout</a>
                                         </li>
                                     </ul>
@@ -237,7 +242,7 @@
                                     <div class="col-md-4">
                                         <ul class="breadcrumb">
                                             <li class="breadcrumb-item">
-                                                <a href="/viewcart"> <i class="fa fa-home"></i> </a>
+                                                <a href="/"> <i class="fa fa-home"></i> </a>
                                             </li>
                                             <li class="breadcrumb-item"><a href="/viewcart">mycart</a>
                                             </li>
@@ -270,7 +275,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="payment-info">
-                                                        <div class="d-flex justify-content-between align-items-center">
+                                                        <!-- <div class="d-flex justify-content-between align-items-center">
                                                             <span>Card details</span><img class="rounded"
                                                                 src="https://i.imgur.com/WU501C8.jpg" width="30">
                                                         </div>
@@ -290,8 +295,8 @@
                                                         <label class="radio"> <input type="radio" name="card"
                                                                 value="payment"> <span><img width="30"
                                                                     src="https://img.icons8.com/officel/48/000000/paypal.png" /></span>
-                                                        </label>
-                                                        <div><label class="credit-card-label">Name on card</label><input
+                                                        </label> -->
+                                                        <!-- <div><label class="credit-card-label">Name on card</label><input
                                                                 type="text" class="form-control credit-inputs"
                                                                 placeholder="Name"></div>
                                                         <div><label class="credit-card-label">Card number</label><input
@@ -306,24 +311,32 @@
                                                                     class="credit-card-label">CVV</label><input
                                                                     type="text" class="form-control credit-inputs"
                                                                     placeholder="342"></div>
-                                                        </div>
+                                                        </div> -->
+                                                        <div class="d-flex flex-row align-items-center"><i
+                                                                class="fa fa-long-arrow-left"></i><span
+                                                                class="ml-2">Check Out</span></div>
                                                         <hr class="line">
                                                         <div class="d-flex justify-content-between information">
-                                                            <span>Subtotal</span><span>Rs. 3000.00</span>
-                                                        </div>
-                                                        <div class="d-flex justify-content-between information">
-                                                            <span>Discount (5%)</span><span> - Rs. 20.00</span>
+                                                            <span>Subtotal</span><span>Rs. <span
+                                                                    id="subtotal">0</span></span>
                                                         </div>
                                                         <div class="d-flex justify-content-between information">
                                                             <span>Discount (5%)</span><span>Not applicable</span>
                                                         </div>
                                                         <div class="d-flex justify-content-between information">
-                                                            <span>Total(Incl. taxes)</span><span>Rs. 3020.00</span>
+                                                            <span>Discount (5%)</span><span>Not applicable</span>
                                                         </div>
-                                                        <button
-                                                            class="btn btn-primary btn-block d-flex justify-content-between mt-3"
-                                                            type="button"><span>Rs. 3020.00</span><span>Checkout<i
-                                                                    class="fa fa-long-arrow-right ml-1"></i></span></button>
+                                                        <div class="d-flex justify-content-between information">
+                                                            <span>Total(Incl. taxes)</span><span>Rs. <span
+                                                                    id="finaltotal">0</span></span>
+                                                        </div>
+                                                        <div id="checkoutbtndiv">
+                                                            <button id="checkoutbtn"
+                                                                class="btn btn-primary btn-block d-flex justify-content-between mt-3"
+                                                                type="button"><span>Rs. <span
+                                                                        id="checkouttotal">0</span></span><span>Checkout<i
+                                                                        class="fa fa-long-arrow-right ml-1"></i></span></button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -354,11 +367,16 @@
     <script src="/js/pcoded.min.js"></script>
     <script src="/vendor/vertical-layout.min.js "></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     <script type="text/javascript" src="/js/script.js "></script>
     <script src="/js/dash.js"></script>
     <script src="/js/custom/firebase.js"></script>
-    <script src="/js/custom/cart.js"></script>
     <script src="/js/custom/mycart.js"></script>
+    <script src="/js/custom/checkout.js"></script>
+    <script src="/js/custom/profilepic.js"></script>
+
 </body>
+
 
 </html>

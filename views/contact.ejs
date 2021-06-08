@@ -41,81 +41,9 @@
 <body>
 
   <!--HEADER MAIN-->
-  <header id="header" class="fixed-top ">
-    <div id="sm-header">
-      <nav class="thin-head navbar navbar-expand-lg d-none d-lg-flex">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link py-1" href="/ebrochure.pdf" target="_blank">Download e-Brochure</a>
-          </li>
-        </ul>
-        <ul class="navbar-nav ml-auto socialmedia">
-          <li class="nav-item">
-            <a class="py-1" href="#"><i class="bx bxl-twitter"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="py-1" href="#"><i class="bx bxl-facebook"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="py-1" href="#"><i class="bx bxl-instagram"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="py-1" href="#"><i class="bx bxl-youtube"></i></a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="container-fluid d-flex align-items-center my-2">
-
-      <h1 class="logo">
-        <a href="/home">
-          <div class="d-flex align-items-center">
-            <img src="/img/logo/logo-img.png" alt="" class="img-fluid mr-2">
-            <div class="d-flex flex-column">
-              <span class="d-inline-block d-lg-none">CMC</span>
-              <span class="d-none d-lg-inline-block">CMC Maritime Academy</span>
-              <span class="location">Chennai</span>
-            </div>
-          </div>
-        </a>
-      </h1>
-      <nav class="nav-menu d-none d-lg-block ml-auto">
-
-        <ul>
-          <li><a href="/home">Home</a></li>
-
-          <li class="drop-down"><a href="#">About</a>
-            <ul>
-              <li><a href="/about">About Us</a></li>
-              <li><a href="/team">Faculty</a></li>
-              <li><a href="/testimonials">Testimonials</a></li>
-            </ul>
-          </li>
-
-          <li class="drop-down"><a href="#">Courses</a>
-            <ul>
-              <li><a href="/dashboard" target="_blank">Basic Modular Courses</a></li>
-              <li><a href="/dashboard" target="_blank">Advanced Modular Courses</a></li>
-              <li><a href="/dashboard" target="_blank">Preparatory Courses</a></li>
-              <li><a href="/dashboard" target="_blank">Refresher Courses</a></li>
-              <li><a href="/dashboard" target="_blank">Simulator Courses</a></li>
-              <li><a href="/dashboard" target="_blank">Package</a></li>
-            </ul>
-          </li>
-
-          <li><a href="/academic">Academic</a></li>
-          <li><a href="/" target="_blank">Login</a></li>
-          <li class="active"><a href="/contact">Contact</a></li>
-          <li><a href="/testimonials">Testimonials</a></li>
-
-        </ul>
-
-      </nav><!-- .nav-menu -->
-
-      <a href="/dashboard" class="get-started-btn ml-auto ml-lg-4">Book Now</a>
-
-    </div>
-  </header><!-- End Header -->
+  <%- include('partial/header'); %>
+  
+  <!-- End Header -->
 
   <main id="main">
 
@@ -237,7 +165,8 @@
               <a href="tel:+919843655985" class="ph"><strong><img src="/img/icon/phone-alt-solid.svg" height="14px"
                     alt=""> </strong> <span>+91 98436 55985</span></a>
               <p class="ph my-2"><strong><img src="/img/icon/whatsapp-brands.svg" height="16px" alt=""> </strong>
-                <span>+91 9843655985</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>+91 9445031188</span></p>
+                <span>+91 9843655985</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>+91 9445031188</span>
+              </p>
               <a class="ph" href="mailto:admission@cmcacademy.ac.in"><strong><img src="/img/icon/envelope-solid.svg"
                     height="14px" alt=""> </strong> admission@cmcacademy.ac.in</a>
 
@@ -257,7 +186,7 @@
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="fa fa-angle-right mr-1"></i> <a href="/home">Home</a></li>
+              <li><i class="fa fa-angle-right mr-1"></i> <a href="/">Home</a></li>
               <li><i class="fa fa-angle-right mr-1"></i> <a href="/about">About us</a></li>
               <li><i class="fa fa-angle-right mr-1"></i> <a href="/">Login</a></li>
               <li><i class="fa fa-angle-right mr-1"></i> <a href="/testimonials">Testimonials</a></li>
@@ -317,5 +246,6 @@
   <script src="/js/academic_gal.js"></script>
 
 </body>
+
 
 </html>

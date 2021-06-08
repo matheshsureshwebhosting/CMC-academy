@@ -105,7 +105,8 @@ Email Required
     `
 
   } else {
-    console.log(firstname, lastname, email, indosnumber, phonenumber, dob, password, cpassword)
+    document.getElementById("signupreg").innerHTML = " <span class='spinner-border spinner-border-sm mr-2' role='status'style='padding: 7px;' aria-hidden='true'></span>Please Wait..."
+    
     const hashpwd = await axios.post("/hash/generate", {
       password: password
     }).then((res) => {
@@ -113,15 +114,17 @@ Email Required
     }).catch((error) => {
       return false
     })
-    if (hashpwd == false) return alert("something Wrong")
-    const siginup = await firebase.auth().createUserWithEmailAndPassword(email, hashpwd).then(function (user) {
+    
+    if (hashpwd == false) return toastr["error"]("something Wrong");
+    const siginup = await firebase.auth().createUserWithEmailAndPassword(email, password).then(function (user) {
       var userid = user.user.uid
+      localStorage.setItem("userid",userid)
       return { status: true, userid: userid }
     }).catch(function (error) {
       var errorMessage = error.message;
       return { status: false, msg: errorMessage }
     });
-    if (siginup.status == false) return alert(siginup.msg)
+    if (siginup.status == false) return toastr["error"](siginup.msg);
     const sendsiginform = await axios.post("/signup", {
       firstname: firstname,
       lastname: lastname,
@@ -131,22 +134,25 @@ Email Required
       dob: dob,
       password: hashpwd,
       clientid: siginup.userid
-    }).then((res) => {      
-      if (res.data == true) {
-        return { status: true, msg: "Registered" }
+    }).then((res) => {          
+      if (res.data.status == true) {        
+        return { status: true, msg: res.data.clientid }
+
       } else {
         return { status: false, msg: "Try Again" }
       }
     }).catch((error) => {
       if (error) return { status: false, msg: error }
-    })
-    if(sendsiginform.status==true){
-      alert("Registerd")
-      window.location.replace("/home")
-    }else{
-      alert("try again")
+    })        
+    if (sendsiginform.status == true) {
+      localStorage.setItem("userid",sendsiginform.msg)
+      toastr["success"]("Successfully Registered..");
+      window.location.replace("/")
+    } else {
+      toastr["error"]("Try Again..");
+
     }
-   
+
   }
 
 })

@@ -29,6 +29,11 @@
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="/css/dashstyle.css">
     <link rel="stylesheet" type="text/css" href="/css/dash_extra.css">
+
+    <link rel="stylesheet" href="/js/log/vendor/toaster/toaster/build/toastr.css">
+    <script src="/js/log/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/js/log/vendor/toaster/toaster/build/toastr.min.js"></script>
+    <script src="/js/log/toaster.js"></script>
 </head>
 <body>
     <!-- Pre-loader start -->
@@ -95,7 +100,7 @@
                         <a class="mobile-menu waves-effect waves-light" id="mobile-collapse" href="#!">
                             <i class="ti-menu"></i>
                         </a>
-                        <a href="dash.html" class="header-logo">
+                        <a href="/" class="header-logo">
                             <img class="img-fluid logo" src="/img/logo/cmc_logo.png" alt="Theme-Logo" /> CMC Maritime Academy
                         </a>
                         <a class="mobile-options waves-effect waves-light">
@@ -110,84 +115,63 @@
                         </ul>
                         <ul class="nav-right">
                             <li class="d-none d-md-inline-block">                                
-                                <a href="#" class="waves-effect waves-light">
+                                <a href="/" class="waves-effect waves-light">
                                     <span>Home</span>
                                 </a>
                             </li>
                             <li class="d-none d-md-inline-block">                                
-                                <a href="#" class="waves-effect waves-light">
+                                <a href="/dashboard" class="waves-effect waves-light">
                                     <span>Courses</span>
                                 </a>
                             </li>
                             <li class="d-none d-md-inline-block">                                
-                                <a href="#" class="waves-effect waves-light">
+                                <a href="/dashboard" class="waves-effect waves-light">
                                     <span>Packages</span>
                                 </a>
                             </li>
 
-                            <li class="header-notification">                                
+                            <li class="header-notification">
                                 <a href="#" class="waves-effect waves-light">
-                                    <span>My Cart <img class="img-fluid cart-img" src="/vendor/opencart-brands.svg" alt=""></span>
-                                    <span class="badge-cart">3</span>
+                                    <span>My Cart <img class="img-fluid cart-img" src="/vendor/opencart-brands.svg"
+                                            alt=""></span>
+                                    <span class="badge-cart" id="cartitem">0</span>
                                 </a>
-                                <ul class="show-notification">
-                                    <li class="waves-effect waves-light">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <h5 class="notification-user">TASCO</h5>
-                                            </div>
-                                            <a class="discard btn btn-danger text-light">Discard</a>
-                                        </div>
-                                    </li>
-                                    <li class="waves-effect waves-light">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <h5 class="notification-user">TASCO</h5>
-                                            </div>
-                                            <a class="discard btn btn-danger text-light">Discard</a>
-                                        </div>
-                                    </li>
-                                    <li class="waves-effect waves-light">
-                                        <div class="media">
-                                            <div class="media-body">
-                                                <h5 class="notification-user">TASCO</h5>
-                                            </div>
-                                            <a class="discard btn btn-danger text-light">Discard</a>
-                                        </div>
-                                    </li>
+                                <ul class="show-notification" id="cart">
+                                    <p id="cartdes" style="text-align: center;font-weight: bold;">Cart is Empty</p>
+
                                 </ul>
                             </li>
                             
                             
                             <li class="user-profile header-notification">
                                 <a href="#!" class="waves-effect waves-light">
-                                    <img src="/img/dash/avatar-4.jpg" class="img-radius" alt="User-Profile-Image">
-                                    <span>John Doe</span>
+                                    <img src="/img/profilepic.png" class="img-radius" alt="User-Profile-Image">
+                                    <span></span>
                                     <i class="ti-angle-down"></i>
                                 </a>
                                 <ul class="show-notification profile-notification">
                                     <li class="waves-effect waves-light">
-                                        <a href="dash-mycourses.html">
+                                        <a href="/dashboard/mycourses">
                                             <i class="ti-notepad"></i> My Courses
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="dash-feedback.html">
+                                        <a href="/dashboard/feedback">
                                             <i class="ti-comment-alt"></i> Feedback
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="dash-certificate.html">
+                                        <a href="/dashboard/certificate">
                                             <i class="ti-file"></i> Certificate
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="dash-profile.html">
+                                        <a href="/dashboard/profile">
                                             <i class="ti-user"></i> View Profile
                                         </a>
                                     </li>
                                     <li class="waves-effect waves-light">
-                                        <a href="logout.html">
+                                        <a href="javascript:void(0)" onclick="logout()">
                                             <i class="ti-layout-sidebar-left"></i> Logout
                                         </a>
                                     </li>
@@ -208,20 +192,20 @@
                         <div class="pcoded-inner-navbar main-menu">
                             <div class="">
                                 <div class="main-menu-header">
-                                    <img class="img-80 img-radius" src="/img/dash/avatar-4.jpg" alt="User-Profile-Image">
+                                    <img class="img-80 img-radius" src="/img/profilepic.png" alt="User-Profile-Image">
                                     <div class="user-details">
-                                        <span id="more-details">John Doe<i class="fa fa-caret-down"></i></span>
+                                        <span id="more-details"><i class="fa fa-caret-down"></i></span>
                                     </div>
                                     <span style="margin-right: 20px;color:rgb(220, 236, 250)">88EL8888</span>
                                 </div>
                                 <div class="main-menu-content">
                                     <ul>
                                         <li class="more-details">
-                                            <a href="dash-mycourses.html"><i class="ti-notepad"></i>My Courses</a>
-                                            <a href="dash-feedback.html"><i class="ti-comment-alt"></i>Feedback</a>
-                                            <a href="dash-certificate.html"><i class="ti-file"></i>Certificate</a>
-                                            <a href="user-profile.html"><i class="ti-user"></i>View Profile</a>
-                                            <a href="auth-normal-sign-in.html"><i class="ti-layout-sidebar-left"></i>Logout</a>
+                                            <a href="/dashboard/mycourses"><i class="ti-notepad"></i>My Courses</a>
+                                            <a href="/dashboard/feedback"><i class="ti-comment-alt"></i>Feedback</a>
+                                            <a href="/dashboard/certificate"><i class="ti-file"></i>Certificate</a>
+                                            <a href="/dashboard/profile"><i class="ti-user"></i>View Profile</a>
+                                            <a href="/logout"><i class="ti-layout-sidebar-left"></i>Logout</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -230,13 +214,13 @@
                             <div class="pcoded-navigation-label">Feedback</div>
                             <ul class="pcoded-item pcoded-left-item">
                                 <li>
-                                    <a href="dash-feedback.html" class="waves-effect waves-dark">
+                                    <a href="/dashboard/feedback" class="waves-effect waves-dark">
                                         <span class="pcoded-mtext">Give Feedback</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
                                 </li>
                                 <li class="active">
-                                    <a href="dash-feedback-video.html" class="waves-effect waves-dark">
+                                    <a href="/feedbackvideo" class="waves-effect waves-dark">
                                         <span class="pcoded-mtext">Upload Video</span>
                                         <span class="pcoded-mcaret"></span>
                                     </a>
@@ -259,9 +243,9 @@
                                     <div class="col-md-4">
                                         <ul class="breadcrumb">
                                             <li class="breadcrumb-item">
-                                                <a href="dash.html"> <i class="fa fa-home"></i> </a>
+                                                <a href="/"> <i class="fa fa-home"></i> </a>
                                             </li>
-                                            <li class="breadcrumb-item"><a href="dash-feedback.html">feedback</a>
+                                            <li class="breadcrumb-item"><a href="/dashboard/feedback">feedback</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -321,5 +305,14 @@
 
   <script type="text/javascript" src="/js/script.js "></script>
   <script src="/js/dash.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase.js"></script>
+  <script src="/js/custom/firebase.js"></script>
+  <script src="/js/custom/cart.js"></script>
+  <script>
+    function logout() {
+        localStorage.removeItem("userid")
+        window.location.replace("/")
+    }
+</script>
 </body>
 </html>

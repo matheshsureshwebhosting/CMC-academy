@@ -10,10 +10,18 @@ router.post("/generate", async (req, res) => {
 })
 
 router.post("/verify", async (req, res) => {
-    const { password, hashPwd } = req.body
-    const verifyPwd = await HASH.verifyPwd(password, hashPwd)
-    if (verifyPwd === false) return res.send(false)
+    const { password, hashPwd } = req.body    
+    const verifyPwds = await HASH.verifyPwd(password, hashPwd)    
+    if (verifyPwds === false) return res.send(false)
     return res.send(hashPwd)
 })
+
+router.post("/change", async (req, res) => {
+    const { password,hashPwd } = req.body    
+    const verifyPwds = await HASH.verifyPwd(password,hashPwd)    
+    if (verifyPwds === false) return res.send(false)
+    return res.send(hashPwd)
+})
+
 
 module.exports = router
