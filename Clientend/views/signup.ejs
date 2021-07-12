@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>CMC - Signup</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/img/logo/cmc_logo.png" rel="icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="/vendor/owl.carousel/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/vendor/font-awesome/all.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!-- Template Main CSS File -->
+    <link href="/css/mainstyle.css" rel="stylesheet">
+    <link href="/css/footer.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/testimonial.css">
+    <link rel="stylesheet" href="/css/strip_carousel.css">
+    <link rel="stylesheet" href="/css/faculty.css">
+    <!--For About Page inlcude-->
+    <link rel="stylesheet" href="/css/team.css">
+    <!--For Signup page include-->
+    <link rel="stylesheet" href="/css/signup.css">
+
+    <link rel="stylesheet" href="/js/log/vendor/toaster/toaster/build/toastr.css">
+    <script src="/js/log/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/js/log/vendor/toaster/toaster/build/toastr.min.js"></script>
+    <script src="/js/log/toaster.js"></script>
+</head>
+
+<body>
+
+    <!--HEADER ABOVE BAR SECTION-->
+
+
+    <!--HEADER MAIN-->
+    <%- include('partial/header'); %>
+        <!-- End Header -->
+
+
+
+
+        <!-- ======= Signup Section ======= -->
+        <section id="signup" class="signup pb-0">
+            <div class="container">
+                <div class="row py-5 mt-5 align-items-center">
+                    <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+                        <!--<img src="https://res.cloudinary.com/mhmd/image/upload/v1569543678/form_d9sh6m.svg" alt="" class="img-fluid mb-3 d-none d-md-block">-->
+                        <img src="/img/intro.gif" alt="" class="img-fluid mb-3 d-none d-md-block">
+                        <h1>Create an Account</h1>
+                        <p class="font-italic text-muted mb-0">Ambition accepted. Learn the latest skills to reach your
+                            professional goals.</p>
+                    </div>
+
+                    <!-- Registeration Form -->
+                    <div class="col-md-7 col-lg-6 ml-auto">
+                        <div>
+                            <div class="row">
+                                <div id="errordiv" class="col-lg-12"></div>
+                                <!-- First Name -->
+                                <div class="input-group col-lg-6 mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                            <i class="fa fa-user text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input id="firstname" type="text" name="firstname" placeholder="First Name"
+                                        class="form-control bg-white border-left-0 border-md">
+                                </div>
+
+                                <!-- Last Name -->
+                                <div class="input-group col-lg-6 mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                            <i class="fa fa-user text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input id="lastname" type="text" name="lastname" placeholder="Last Name"
+                                        class="form-control bg-white border-left-0 border-md">
+                                </div>
+
+                                <!-- Email Address -->
+                                <div class="input-group col-lg-12 mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                            <i class="fa fa-envelope text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input id="email" type="email" name="email" placeholder="Email Address"
+                                        class="form-control bg-white border-left-0 border-md">
+                                </div>
+
+                                <!-- INDOS Number -->
+                                <div class="input-group col-lg-12 mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                            <i class="fas fa-id-badge text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input id="indosnumber" type="tel" name="phone" placeholder="INDOS Number"
+                                        class="form-control bg-white border-md border-left-0" maxlength="8">
+                                </div>
+
+
+                                <!-- Whatsapp Number -->
+                                <div class="input-group col-lg-12 mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                            <i class="fa fa-phone-square text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input id="phonenumber" type="tel" name="phone" placeholder="Whatsapp Number"
+                                        class="form-control bg-white border-md border-left-0" maxlength="10">
+                                </div>
+
+
+                                <!-- Date of Birth -->
+                                <div class="input-group col-lg-12 mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                            <i class="fas fa-birthday-cake"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" name="dob" id="dob" placeholder="Date Of Birth"
+                                        class="form-control bg-white border-left-0 border-md"
+                                        onfocus="(this.type='date')">
+                                </div>
+
+                                <!-- Password -->
+                                <div class="input-group col-lg-6 mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                            <i class="fa fa-lock text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input id="password" type="password" name="password" placeholder="Password"
+                                        class="form-control bg-white border-left-0 border-md">
+                                </div>
+
+                                <!-- Password Confirmation -->
+                                <div class="input-group col-lg-6 mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                            <i class="fa fa-lock text-muted"></i>
+                                        </span>
+                                    </div>
+                                    <input id="cpassword" type="password" name="passwordConfirmation"
+                                        placeholder="Confirm Password"
+                                        class="form-control bg-white border-left-0 border-md">
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="form-group col-lg-12 mx-auto mb-0">
+                                    <button class="btn btn-signup btn-block py-2" id="signupreg" style="cursor: pointer;">
+                                        <span class="font-weight-bold">Create your account</span>
+                                    </button>
+                                </div>
+
+
+
+                                <!-- Already Registered -->
+                                <div class="text-center w-100 mt-2">
+                                    <p class="text-muted font-weight-bold">Already Registered? <a href="/"
+                                            class="text-red ml-2">Login</a></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End Signup Section -->
+
+
+        </main><!-- End #main -->
+
+        <section class="footer-wave">
+            <img src="/img/ship_footer.png" class="ship" alt="">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+            <div class="wave wave3"></div>
+            <div class="wave wave4"></div>
+        </section>
+        <!-- ======== Footer =========== -->
+        <section id="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-info">
+                                <h3>CMC Maritime Academy</h3>
+                                <p>
+                                    The Taj, New No. 70, Old No. 29,<br>
+                                    Block 'C', 3rd Floor,<br>
+                                    Ritherdon Road, Vepery,<br>
+                                    Chennai - 600 007. Tamil Nadu.<br><br>
+                                </p>
+                                <a href="tel:+919843655985" class="ph"><strong><img src="/img/icon/phone-alt-solid.svg"
+                                            height="14px" alt=""> </strong> <span>+91 98436 55985</span></a>
+                                <p class="ph my-2"><strong><img src="/img/icon/whatsapp-brands.svg" height="16px"
+                                            alt="">
+                                    </strong> <span>+91 9843655985</span><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>+91
+                                        9445031188</span></p>
+                                <a class="ph" href="mailto:admission@cmcacademy.ac.in"><strong><img
+                                            src="/img/icon/envelope-solid.svg" height="14px" alt=""> </strong>
+                                    admission@cmcacademy.ac.in</a>
+
+                                <div class="social-links mt-3">
+                                    <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                    <a href="#" class="google-plus"><i class="fa fa-google"></i></a>
+                                    <a href="https://www.facebook.com/cmcchennaiofficial" class="facebook"><i
+                                            class="fa fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/cmc_maritime_academy_chennai/"
+                                        class="instagram"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://www.youtube.com/channel/UCpLhH2j93cbeEz1vLS5c4pQ/featured"
+                                        class="youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Useful Links</h4>
+                            <ul>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/">Home</a></li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/about">About us</a></li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/login">Login</a></li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/testimonials">Testimonials</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Academic</h4>
+                            <ul>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/academic">Infrastructure</a></li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/team">Faculties</a></li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/academic">Rules and Regulations</a>
+                                </li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/academic">FAQ</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <h4>Courses</h4>
+                            <ul>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Basic Modular
+                                        Courses</a>
+                                </li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Advanded Modular
+                                        Courses</a>
+                                </li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Refresher Courses</a>
+                                </li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Simulator Courses</a>
+                                </li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Preparatory Courses</a>
+                                </li>
+                                <li><i class="fa fa-angle-right mr-1"></i> <a href="/dashboard">Packages</a></li>
+                            </ul>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <a href="#" class="back-to-top">
+            <!--<i class="icofont-simple-up"></i>-->
+            <img src="/img/steer.png" alt="">
+        </a>
+        <div id="mailtemplate" style="display: none;">
+            <%- include('partial/mailtemplate'); %>
+        </div>
+        <!-- Vendor JS Files -->
+        <script src="/vendor/jquery/jquery.min.js"></script>
+        <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
+        <script src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="/vendor/bootstrap/js/popper.js"></script>
+        <script src="/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+
+        <!-- Template Main JS File -->
+        <script src="/js/testimonial.js"></script>
+        <script src="/js/text-testimonial.js"></script>
+        <script src="/js/main.js"></script>
+        <script src="/js/strip_carousel.js"></script>
+        <!-- <script src="/js/faculty.js"></script> -->
+        <!--For Academic page-->
+        <script src="/js/academic_gal.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase.js"></script>
+        <script src="/js/custom/firebase.js"></script>
+        <script src="/js/custom/signup1.js"></script>
+
+</body>
+
+</html>

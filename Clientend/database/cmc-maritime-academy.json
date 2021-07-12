@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cmc-maritime-academy",
+  "private_key_id": "0fe551fbbff04da79ce449f8978c3c5f1cf24d15",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDwnMgakNI7h7zs\nW0N9t1YpE723uFcPYoD1p7Os34v4xUy2JCVCsOc+gVao+VJhodlC36ILTtMlEiCN\n5UzpXr8EeknTvmvcyuGtDggBYn/aa7mAFA5W0KWiUtN/zWda77XrYrrE21+Oei0Y\nMC+qip1QkTBK27WELTa469T4OP4k2TyJv8nud0LPZMe6fABx9ibw/E6mPKtSazqg\nYIfm0u5wwlzBHrWsoSkO4X3KZ7NCkw/E69QNKoPbSoioecYOsxI6ZvSS9xHv0ucW\nGQqu5Ki4TFMX9vU5ttRrXIQSRKEODzeTwtI3ta3lx5tVNYArS8AirI79axWC/HGs\niE4HrOhRAgMBAAECggEAE54AvZO9pD9gopedRNBwDKjQoLw9kuJJ1918q3VNbPKv\nGrGPPST9sY2rglrTgeTHeSmRBWF/mwfjkhYWI3fHVKbgwowFsMp0xF5+vhgpCuaa\nCOx5r8/SlU2x8ztMuDAPkbmqtxaYr53b89sn47xp75Hq0Uug/L4P9ls58aP56oiI\nK+QBRCPWXOqXjzcN9tAnOLP3R8nwNOTMOHNyitTACbPAAzIJ0dLel/dUslI98T9/\nsMeMEj9ShtMDd+M37ot1BsA+9C9J6xSx6SUYgXlirHFnfODzeO5SgkjqQtx00EFJ\nLT7xGTKgSmjbrYiaKQqX5gSU2Lvr2uhTq8GcSHld7QKBgQD4yOIUxZkjstgwAvNf\nNEu2mBM1P/9hZtdQTSJfgg9GQXVrBo0S1IcYD9mdMmbD8F8gKri6ZFAqX3h4ufaK\nKHy4lj+rxeM8N0u+jsNXwx5PsZos9VHIYt5IvJvhH9NjYUooOZK0t7wWgOhw/AP3\nxdAx4h3xjKyvgur4Yk4l9u/HxQKBgQD3lzkXGDayWoMbgVEqFK8xPljQ+EX8G+VP\nfTd5e0GlHunIRscanbabd3VeszIvxhQHvHHMfzYiPEC48TLcL0IARwN5H2B2oshv\n9aMp5HYseitg/ghABW/mK1MS8xQnU4fqvB/I+nXfc0kqBKpLgbnXvgA0z9J09OiE\npx/7uEObHQKBgQCekRMgIC2SRkxqlYbe+GsFj3o2p3qzbyPvJ6qv6yqnIdOgCoXi\nKZmNaZTPD6/WVR+cVf51trgtuboEYKrVtiaAVCty5WcHG0town+ZMWDhdJaK7zVY\nHkQFYkmMPIe0QO9OIhvymWUFhtYgJVC2HNus360sJvhtyWjQNYAPzItZ7QKBgHkA\nagFUbx7ZR2wA1kbnlvtNCiEOxT1B8N7ZRmxThbCKHB0qIhJq85ylVDI1B5j7iDyD\np2YW4cD3i3YXQxEC85GpIxRl9kHkqmq1NMm7gtmX121umV+YiKiHkfEX5UiW9T0O\nNcaGSWcsM5yabRO70bSTggxNaQCJ1L1H5ESkOD4tAoGASqZFMNjo/nlbdQY0UN7E\n8JiLuGzmYWDYkZi9EFzm90oSUcX9RYbmYOETA1/0XjfMDi9XJIPi5ZbpfJUMffgC\nO6fqk2RcZL+QEJ/+086Nlw/kImsBcbirmQRVuo8fXkviqIPvHHPwBNRcKWjDHyuZ\nr+nlxE25UMfvYqbf1ZhWDU4=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-x3wf9@cmc-maritime-academy.iam.gserviceaccount.com",
+  "client_id": "115291990299875610151",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-x3wf9%40cmc-maritime-academy.iam.gserviceaccount.com"
+}

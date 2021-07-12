@@ -1,0 +1,579 @@
+<!doctype html>
+<html class="no-js " lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
+    <title>Admin</title>
+    <link rel="icon" href="alpha.ico.png" type="image/x-icon"> <!-- Favicon-->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css" />
+    <link rel="stylesheet" href="assets/plugins/charts-c3/plugin.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/plugins/morrisjs/morris.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="/assets/js/log/vendor/toaster/toaster/build/toastr.css">
+    <script src="/assets/js/log/vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="/assets/js/log/vendor/toaster/toaster/build/toastr.min.js"></script>
+    <script src="/assets/js/log/toaster.js"></script>
+    <!-- <link rel="stylesheet" href="/assets/css/simplePagination.css"> -->
+    <link rel="stylesheet" href="/assets/css/simplePagination.css">
+
+
+</head>
+<style>
+    iframe {
+        height: 171px;
+    }
+</style>
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        line-height: 18px;
+        background: #f4f4f4;
+    }
+
+    .list-wrapper {
+        padding: 15px;
+        overflow: hidden;
+    }
+
+    .list-item {
+        border: 1px solid #EEE;
+        background: #FFF;
+        margin-bottom: 10px;
+        padding: 10px;
+        box-shadow: 0px 0px 10px 0px #EEE;
+    }
+
+    .list-item h4 {
+        color: #FF7182;
+        font-size: 18px;
+        margin: 0 0 5px;
+    }
+
+    .list-item p {
+        margin: 0;
+    }
+
+    .simple-pagination ul {
+        margin: 0 0 20px;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    .simple-pagination li {
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .simple-pagination li a,
+    .simple-pagination li span {
+        color: #666;
+        padding: 5px 10px;
+        text-decoration: none;
+        border: 1px solid #EEE;
+        background-color: #FFF;
+        box-shadow: 0px 0px 10px 0px #EEE;
+    }
+
+    .simple-pagination .current {
+        color: #FFF;
+        background-color: #FF7182;
+        border-color: #FF7182;
+    }
+
+    .simple-pagination .prev.current,
+    .simple-pagination .next.current {
+        background: #e04e60;
+    }
+</style>
+
+<body class="theme-blush">
+
+    <!-- Page Loader -->
+    <!-- <div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="m-t-30"><img class="zmdi-hc-spin" src="assets/images/loader.svg" width="48" height="48" alt="Aero"></div>
+        <p>Please wait...</p>
+    </div>
+</div> -->
+
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+
+    <!-- Main Search -->
+    <div id="search">
+        <button id="close" type="button" class="close btn btn-primary btn-icon btn-icon-mini btn-round">x</button>
+        <form>
+            <input type="search" value="" placeholder="Search..." />
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+
+  
+
+    <%- include("common/sidebar.ejs"); -%>
+
+        <!-- Right Sidebar -->
+        <aside id="rightsidebar" class="right-sidebar">
+            <ul class="nav nav-tabs sm">
+                <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#setting"><i
+                            class="zmdi zmdi-settings zmdi-hc-spin"></i></a></li>
+                <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#chat"><i
+                            class="zmdi zmdi-comments"></i></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="setting">
+                    <div class="slim_scroll">
+                        <div class="card">
+                            <h6>Theme Option</h6>
+                            <div class="light_dark">
+                                <div class="radio">
+                                    <input type="radio" name="radio1" id="lighttheme" value="light" checked="">
+                                    <label for="lighttheme">Light Mode</label>
+                                </div>
+                                <div class="radio mb-0">
+                                    <input type="radio" name="radio1" id="darktheme" value="dark">
+                                    <label for="darktheme">Dark Mode</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h6>Color Skins</h6>
+                            <ul class="choose-skin list-unstyled">
+                                <li data-theme="purple">
+                                    <div class="purple"></div>
+                                </li>
+                                <li data-theme="blue">
+                                    <div class="blue"></div>
+                                </li>
+                                <li data-theme="cyan">
+                                    <div class="cyan"></div>
+                                </li>
+                                <li data-theme="green">
+                                    <div class="green"></div>
+                                </li>
+                                <li data-theme="orange">
+                                    <div class="orange"></div>
+                                </li>
+                                <li data-theme="blush" class="active">
+                                    <div class="blush"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h6>General Settings</h6>
+                            <ul class="setting-list list-unstyled">
+                                <li>
+                                    <div class="checkbox rtl_support">
+                                        <input id="checkbox1" type="checkbox" value="rtl_view">
+                                        <label for="checkbox1">RTL Version</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox ms_bar">
+                                        <input id="checkbox2" type="checkbox" value="mini_active">
+                                        <label for="checkbox2">Mini Sidebar</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="checkbox3" type="checkbox" checked="">
+                                        <label for="checkbox3">Notifications</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="checkbox4" type="checkbox">
+                                        <label for="checkbox4">Auto Updates</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="checkbox5" type="checkbox" checked="">
+                                        <label for="checkbox5">Offline</label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="checkbox">
+                                        <input id="checkbox6" type="checkbox" checked="">
+                                        <label for="checkbox6">Location Permission</label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane right_chat" id="chat">
+                    <div class="slim_scroll">
+                        <div class="card">
+                            <ul class="list-unstyled">
+                                <li class="online">
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <img class="media-object " src="assets/images/xs/avatar4.jpg" alt="">
+                                            <div class="media-body">
+                                                <span class="name">Sophia <small
+                                                        class="float-right">11:00AM</small></span>
+                                                <span class="message">There are many variations of passages of Lorem
+                                                    Ipsum
+                                                    available</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="online">
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                            <div class="media-body">
+                                                <span class="name">Grayson <small
+                                                        class="float-right">11:30AM</small></span>
+                                                <span class="message">All the Lorem Ipsum generators on the</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="offline">
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                            <div class="media-body">
+                                                <span class="name">Isabella <small
+                                                        class="float-right">11:31AM</small></span>
+                                                <span class="message">Contrary to popular belief, Lorem Ipsum</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="me">
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <img class="media-object " src="assets/images/xs/avatar1.jpg" alt="">
+                                            <div class="media-body">
+                                                <span class="name">John <small
+                                                        class="float-right">05:00PM</small></span>
+                                                <span class="message">It is a long established fact that a reader</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="online">
+                                    <a href="javascript:void(0);">
+                                        <div class="media">
+                                            <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                            <div class="media-body">
+                                                <span class="name">Alexander <small
+                                                        class="float-right">06:08PM</small></span>
+                                                <span class="message">Richard McClintock, a Latin professor</span>
+                                                <span class="badge badge-outline status"></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+
+        <!-- Main Content -->
+
+        <section class="content">
+            <div class="block-header">
+                <div class="container-fluid" id="invoice">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h2 class="text-center" style="color: #EA4335 !important;
+                    font-weight: bolder;
+                    margin-top: 20px;
+                    text-align: center !important;
+                    margin-bottom: 100px !important;">Time Table</h2>
+
+                            <div class="row" style="margin-top: -40px;margin-bottom: 30px;">
+                                <div class="col-xs-3 col-md-3"></div>
+                                <div class="col-xs-6 col-md-6">
+                                    <label for="" style="margin-top: 20px;">Course Name</label>
+                                    <input type="text" class="form-control" 
+                                        placeholder="Course Name" id="coursename">
+                                </div>
+                                <div class="col-xs-3 col-md-3"></div>
+
+                            </div>
+                            <div class="row mt-5">
+
+                                <div class="col-md-4">
+                                    <address>
+                                        <label for="" style="margin-top: 20px;">Batch No</label>
+                                        <input type="text" class="form-control" 
+                                            placeholder="Batch No" id="batchno">
+
+                                    </address>
+                                </div>
+                                <div class="col-md-4" style="margin-top: 20px;">
+                                    <address>
+                                        <label for="">Batch Commencement Date</label>
+                                        <input type="date" class="form-control" placeholder="Batch Commencement Date"
+                                            id="startingdate">
+
+                                    </address>
+                                </div>
+                                <div class="col-md-4" style="margin-top: 20px;">
+                                    <address>
+                                        <label for="">Batch End Date</label>
+                                        <input type="date" class="form-control" placeholder="Batch End Date"
+                                            id="enddate">
+                                    </address>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 30px;">
+                        <div class="col-xs-3 col-md-3"></div>
+                        <div class="col-xs-6 col-md-6">
+                            <label for="" style="margin-top: 20px;">Sub Heading</label>
+                            <input type="text" class="form-control"  placeholder="Sub Heading"
+                                id="subheading">
+                        </div>
+                        <div class="col-xs-3 col-md-3"></div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table mb-0 table-borderless">
+                                    <thead>
+                                        <tr class="item-row">
+                                            <th>Day</th>
+                                            <th>09.00 - 10.00</th>
+                                            <th>10.15 - 12.15</th>
+                                            <th>13.00 - 15.00</th>
+                                            <th>15.00 - 16.00</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        
+                                        <tr class="item-row">
+                                            <td class="item-name">
+                                                <div class="delete-btn"><input type="text" class="form-control days"
+                                                        placeholder="Days" id="days" type="text"><a
+                                                        class=' + $.opt.delete.substring(1) + ' href="javascript:;"
+                                                        title="Remove row"></a></div>
+                                            </td>
+                                            <td><input class="form-control firstsession" id="Firstsessions"
+                                                    placeholder="First sessions" type="text">
+                                            </td>
+                                            <td><input class="form-control secondsession" id="secondsession"
+                                                    placeholder="Second sessions" type="text">
+                                            </td>
+                                            <td><input class="form-control thirdsession" id="thirdsession"
+                                                    placeholder="Third sessions" type="text">
+                                            </td>
+                                            <td><input class="form-control fourthsession" id="fourthsession"
+                                                    placeholder="Fourth sessions" type="text">
+                                            </td>
+
+                                        </tr>
+                                        <tr id="hiderow">
+                                            <td colspan="4">
+                                                <a id="addRow" href="javascript:;" title="Add a row"
+                                                    class="btn btn-primary">Add
+                                                    a
+                                                    row</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-12 text-right mb-3" style="margin: 20px;">
+                                <input type="button" class="btn btn-primary"
+                                    style="background-color:#EA4335 !important ;border: 1px solid #EA4335; float: right;"
+                                    value="View Table" id="invoicebtn" onclick="submitinvoice()">
+                            </div>
+                            <!-- <div class="text-right" style="margin: 20px;">
+                    <a href="merchantox.com" style="color: black;">Powered By <img id="img"
+                            src="/public/img/logo-main-black.png" width="130px"></a>
+                </div> -->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+        <!-- Jquery Core Js -->
+        <script src="/public/admin/js/plugins.min.js"></script>
+        <script src="/public/admin/js/script.min.js"></script>
+        <script>
+        </script>
+        <script src="js/jquery.simplePagination.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="/assets/js/custom/jquery.invoice.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase.js"></script>
+        <script src="/assets/js/custom/firebase.js"></script>
+        <script src="/assets/js/custom/createtable.js"></script>
+
+        <script>
+            jQuery(document).ready(function () {
+                jQuery().invoice({
+                    addRow: "#addRow",
+                    delete: ".delete",
+                    parentClass: ".item-row",
+                    days: ".days",
+                    firstsession: ".firstsession",
+                    secondsession: ".secondsession",
+                    thirdsession: ".thirdsession",
+                    fourthsession: ".fourthsession",
+                });
+            });
+        </script>
+</body>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+
+    let onlineTestApp1 = new function () {
+        this.printPage = function () {
+
+            //Add some style to the print.
+            // ref: https://www.encodedna.com/javascript/print-html-table-with-image-using-javascript.htm 
+            let style = "<style>";
+            style = style + "h2 {text-align:center; font:22px Times New Roman; font-weight:bold;}";
+            style = style + ".subject {text-align:center;}";
+            style = style + "ul {font:18px Calibri; display:inline-block; list-style:none; margin:0; padding:20px 0;}";
+            style = style + ".answers {font:18px Calibri; padding:10px 0;}";
+            style = style + ".picture {float:right; padding:10px 0;}";
+            style = style + "</style>";
+
+            // Add date and time (to avoid any any ambiguity concerning submission of paper).
+            let oDt = new Date();
+
+            // Get full date.
+            let sDate = oDt.getDate() + '/' + (oDt.getMonth() + 1) + '/' + oDt.getFullYear();
+
+            // Get full time.
+            let hrs = oDt.getHours();
+            let min = oDt.getMinutes();
+            let sec = oDt.getSeconds();
+
+            let sTime = hrs + ':' + min + ':' + sec;
+
+
+
+            let theBody = '';
+
+            let ele_tArea = document.getElementsByTagName('textarea');
+
+            for (let i = 0; i <= ele_tArea.length - 1; i++) {
+                if (theBody === '') {
+                    if (ele_tArea[i].value != '') {
+                        theBody = '<p class="answers"> <b>Answer ' + (i + 1) + '</b> - ' + ele_tArea[i].value + '</p>';
+                    }
+                }
+                else {
+                    if (ele_tArea[i].value != '') {
+                        theBody = theBody + '<p class="answers"> <b>Answer ' + (i + 1) + '</b> - ' + ele_tArea[i].value + '</p>';
+                    }
+                }
+            }
+
+            theBody = header + header1 + order + table + logo + theBody;
+
+            // Create window object and print the data.
+            let newWin = window.open('', '', 'height=700,width=700');
+
+            newWin.document.write(style);
+            newWin.document.write(theBody);
+            console.log(theBody)
+            newWin.print();
+            newWin.close();
+            console.log(window);
+        }
+    }
+
+
+    var db = firebase.firestore()
+    function submitinvoice() {
+        var courseid = localStorage.getItem("courseid")
+
+        var coursename = document.getElementById("coursename").value;
+        var batchno = document.getElementById("batchno").value;
+        var startingdate = document.getElementById("startingdate").value;
+        var enddate = document.getElementById("enddate").value;
+        var subheading = document.getElementById("subheading").value;
+        tabledata = []
+        var data = {}
+        var days = document.querySelectorAll(".days")
+        for (var i = 0; i < days.length; i++) {
+            tabledata.push(
+                data = {
+                    "days": document.getElementsByClassName("days")[i].value,
+                    "firstsession": document.getElementsByClassName("firstsession")[i].value,
+                    "secondsession": document.getElementsByClassName("secondsession")[i].value,
+                    "thirdsession": document.getElementsByClassName("thirdsession")[i].value,
+                    "fourthsession": document.getElementsByClassName("fourthsession")[i].value,
+                }
+            )
+        }
+        var coursedata = {
+            coursename: coursename,
+            batchno: batchno,
+            startingdate: startingdate,
+            enddate: enddate,
+            subheading: subheading
+        }
+        localStorage.setItem("batchno", batchno)
+        db.collection("timetable").doc(courseid).collection("batchno").doc(batchno).set({
+            tabledata: tabledata,
+            coursedata: coursedata
+        }).then(() => {
+            console.log("added"),
+                setTimeout(() => {
+                    window.location.replace("/pdf")
+                }, 1000)
+        })
+    }
+
+
+
+</script>
+
+</html>
